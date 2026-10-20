@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Membership Program</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: #181818;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Стиль заголовка как на скриншоте (MEMBERSHIP PROGRAM) */
+        .title {
+            font-size: 28px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .title span {
+            color: #ff4500; /* Ярко-оранжевый / красный акцент */
+            text-shadow: 0 0 12px rgba(255, 69, 0, 0.4);
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #aaaaaa;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        /* Форма ввода */
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #dddddd;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            background-color: #222222;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #ff4500;
+            box-shadow: 0 0 8px rgba(255, 69, 0, 0.4);
+            background-color: #282828;
+        }
+
+        .form-group input::placeholder {
+            color: #666666;
+        }
+
+        /* Главная кнопка в стиле CHOOSE PLAN (ярко-жёлтая/оранжевая) */
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background-color: #ffb700; /* Жёлто-оранжевый цвет кнопки */
+            color: #000000;
+            font-size: 15px;
+            font-weight: 800;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            letter-spacing: 1px;
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #ffa200;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 183, 0, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Акцентная плашка сверху формы (как выделенная карточка Quarterly) */
+        .highlight-card {
+            background: linear-gradient(135deg, #ff3300, #ff5500);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+
+        .highlight-card p {
+            font-size: 13px;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        .highlight-card h3 {
+            font-size: 18px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Заголовок страницы -->
+        <h1 class="title">USER <span>DETAILS</span></h1>
+        <p class="subtitle">Enter your information to complete your registration.</p>
+
+        <!-- Блок выбранного тарифа в стиле ярко-красной карточки -->
+        <div class="highlight-card">
+            <p>SELECTED PLAN</p>
+            <h3>Quarterly — $49.99 / 3 months</h3>
+        </div>
+
+        <!-- Форма для ввода данных -->
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+996 (_) _--_" required>
+            </div>
+
+            <div class="form-group">
+                <label for="plan">Confirm Plan</label>
+                <select id="plan" name="plan">
+                    <option value="monthly">Monthly — $19.99 / month</option>
+                    <option value="quarterly" selected>Quarterly — $49.99 / 3 months</option>
+                    <option value="yearly">Yearly — $99.99 / year</option>
+                </select>
+            </div>
+
+            <!-- Кнопка отправки -->
+            <button type="submit" class="submit-btn">PROCEED TO PAYMENT</button>
+        </form>
+    </div>
+
+</body>
+</html>
